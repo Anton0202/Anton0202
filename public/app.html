@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=" utf-8"/>
+        <title>SA Data Classification app</title>
+   <link rel="stylesheet" href="styles.css">
+   <script src = http://localhost:3000/libraries/p5.js></script>
+   <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+   <script src="sketch.js"></script>
+    </head>
+   
+    <body>
+        
+        <div class = "container">
+            <div class  = "nav-wrapper">
+                <div class = "left-side">
+        <div class = "nav-link-wrapper "> 
+                 <a href = "index.html">Login/Signup</a>
+        </div>
+        <div class = "nav-link-wrapper active-nav-link ">
+                    <a href = "app.html">Data Classification APP</a>
+        
+
+
+    </div>
+  
+    </div>
+        
+        <div class = "right-side">
+            <div class = "brand"> 
+                <div> BY CHANEL AMBER ESTERHUIZEN</div>
+            </div>
+                </div>
+            </div>
+        </div>
+   
+        </div>
+
+
+     <div class="content-wrapper"> 
+       <div class = "info-wrapper">
+
+           <div class = "profile-content-wrapper">
+      
+
+         <p>Upload file</p>
+       
+         <form action="/action_page.php">
+            <input type="file" id="myFile" name="filename">
+            <input type="submit">
+          </form>
+          <script>
+            function myFunc() {
+                console.log(fetch('https://localhost:3000/api/people'))
+.then(res => res.json())
+//.then(data => console.log(data))
+object.onclick = function(){myScript};
+object.addEventListener("click", myScript);
+            }
+            </script>
+         <p>Read data</p>
+         <button onclick="myFunc()">Click here to read data</button>
+         <element onclick="myScript"></element>
+       
+         <p>Read metadata</p>
+         <button class="ReadMetadata">Click here to read metadata</button>
+
+
+        
+
+         <p>Classidy ID length(13)</p>
+         <button class="IDlength13">Click here to validate the ID length</button>
+
+         <p>Classify ID validility using Luhn algorithm</p>
+         <button class="IDLuhn">Click here to validate the ID using Luhn</button>
+
+         <p>Personal Info</p>
+         <p>Display Personal info here...</p>
+         <button class="Approve">Click here to approve the personal info</button>
+               <p>                 </p>
+         <button class="Disapprove">Click here to Disaprove the personal info </button>
+                 <p>                 </p>
+         <button class="InsertClassified">Click here to ammend more data</button>
+         <p>Checkbox</p>
+        
+              
+
+           </div>
+
+       </div>  
+
+
+     </div>
+
+
+
+         
+
+    </body> 
+    
+    <script>
+
+    </script>

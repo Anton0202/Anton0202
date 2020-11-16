@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=" utf-8"/>
+        <title>Data Classification Application</title>
+        <script src="https://kit.fontawesome.com/49e65e8ee8.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css">
+    <script langauge = "javascript" type = "text/javascript" src="libraries/p5.js"></script>
+    <script langauge = "javascript" src="libraries/p5.dom.js"></script>
+    <script langauge = "javascript" type = "text/javascript" src="people.js"></script>
+</head>
+    <body>
+     </div>
+        <div class = "container">
+            <div class  = "nav-wrapper">
+                <div class = "left-side">
+        <div class = "nav-link-wrapper active-nav-link"> 
+                 <a href = "login/signup.html">Login/Signup</a>
+        </div>
+        <div class = "nav-link-wrapper ">
+                    <a href = "app.html">APP</a>
+        
+        </div>
+      
+         
+
+<div class = "login" >
+<div class = "CV_left">
+    <div class = "CV_content"> 
+        <div class="CV_item_info">
+           <div class="title">
+            <p class="bold">login</p>
+                      <form action="/action_page.php">
+                <label for="UsernameS">Username:</label>
+                <input type="text" id="UsernameS" name="fUsernameS"><br><br>
+                <label for="PasswordS">Password:</label>
+                <input type="text" id="PasswordS" name="PasswordS"><br><br>
+                      <label for="EmailS">Email:</label>
+                <input type="text" id="EmailS" name="EmailS"><br><br>
+                 <button class="LOGIN">LOGIN</button>
+                 <button onclick="createUser()">Create User</button>
+       
+           </div>
+           <ul>
+        
+    
+           </ul>
+        </div>
+       
+
+
+
+        </div>
+    </div>
+    <div class = "CV_right"> 
+<div class="CV_item CV_about">
+    <div class="title">
+        <p class="bold">Signup</p>
+    
+    </div>
+    <p>Please signup if you do not have an account yet</p>
+  
+    <form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+        <label for="IdNum">ID Number:</label>
+  <input type="text" id="IdNum" name="IdNum"><br><br>
+        <label for="Username">Username:</label>
+  <input type="text" id="Username" name="Username"><br><br>
+        <label for="Email">Email:</label>
+  <input type="text" id="Email" name="Email"><br><br>
+          <label for="Password">Password:</label>
+  <input type="text" id="Password" name="Password"><br><br>
+          <label for="Gender">Gender:</label>
+  <input type="text" id="Gender" name="Gender"><br><br>
+        <label for="Nationality">Nationality:</label>
+  <input type="text" id="Nationality" name="Nationality"><br><br>
+  <input type="submit" value="Submit">
+</form>
+     
+</div>
+     
+
+    </body> 
+    
+    <script>
+async function  createUser(username, password, email) {
+
+return fetch("http://localhost:3000/people", 
+    { 
+
+    // Adding method type
+
+    method: "POST", 
+
+    // Adding body or contents to send 
+
+    headers :{
+        "content-type": "application/json"
+    },
+
+    body: JSON.stringify({
+        "username" : username.value,
+        "email" : email.value,
+        "password" : password.value
+    })
+});
+
+}
+    </script>
+</html>

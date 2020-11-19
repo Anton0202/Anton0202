@@ -1,7 +1,7 @@
 body { 
     margin: 0px ;
     padding:  0 ;
-   background: lightgray ; 
+   background: lightblue ; 
    height:  100vh ;
    font-size:  14px ;
    line-height: 22px;
@@ -16,7 +16,7 @@ z-index: -1000;
     
 }
  .LOGIN {
-    background-color: seagreen; 
+    background-color: blue; 
     border:solid ;
     color:black ;
     padding: 10px 20px;
@@ -26,7 +26,7 @@ z-index: -1000;
     font-size: 12px;
   }
  .SIGNUP{
-    background-color: seagreen; 
+    background-color: blue; 
     border:solid ;
     color:black ;
     padding: 10px 20px;
@@ -37,7 +37,7 @@ z-index: -1000;
   }
 .Scroll{
     font-size: 30px ;
-    color:green ;
+    color:red ;
 }
 .bold{
     font-weight: 700;
@@ -54,7 +54,7 @@ z-index: -1000;
 }
 .CV .CV_left{
     width: 280px ;
-    background: lightblue ;
+    background: lightgray ;
 
 
 }
@@ -235,7 +235,7 @@ z-index: -1000;
     color: blueviolet;
 }
 .Read {
-    background-color: seagreen; 
+    background-color: blue; 
     border:solid ;
     color:black ;
     padding: 10px 20px;
@@ -245,7 +245,7 @@ z-index: -1000;
     font-size: 12px;
   }
   .Upload {
-    background-color:  seagreen; 
+    background-color:  blue; 
     border: solid;
     color:black ;
     padding: 10px 20px;
@@ -256,7 +256,7 @@ z-index: -1000;
     font-size: 12px;
   }
   .IDlength13 {
-    background-color: seagreen; 
+    background-color: blue; 
     border:solid ;
     color:black ;
     padding: 10px 20px;
@@ -266,7 +266,7 @@ z-index: -1000;
     font-size: 12px;
   }
   .Approve {
-    background-color: seagreen; 
+    background-color: blue; 
     border:solid ;
     color:black ;
     padding: 10px 20px;
@@ -276,7 +276,7 @@ z-index: -1000;
     font-size: 12px;
   }
   .Disapprove{
-    background-color: seagreen; 
+    background-color: blue; 
     border:solid ;
     color:black ;
     padding: 10px 20px;
@@ -286,7 +286,7 @@ z-index: -1000;
     font-size: 12px;
   }
   .InsertClassified {
-    background-color: seagreen; 
+    background-color: blue; 
     border:solid ;
     color:black ;
     padding: 10px 20px;
@@ -296,7 +296,7 @@ z-index: -1000;
     font-size: 12px;
   }
   .IDLuhn{
-    background-color: seagreen; 
+    background-color: blue; 
     border:solid ;
     color:black ;
     padding: 10px 20px;
@@ -306,7 +306,7 @@ z-index: -1000;
     font-size: 12px;
   }
   .ReadMetadata {
-    background-color: seagreen; 
+    background-color: blue; 
     border:solid ;
     color:black ;
     padding: 10px 20px;

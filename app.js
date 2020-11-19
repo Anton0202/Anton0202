@@ -13,6 +13,8 @@ mongoose.connect('mongodb+srv://Anton:' + process.env.MONGO_ATLAS_PW + '@cmpg323
 });
 mongoose.Promise = global.Promise;
 
+app.use(express.static('public'));
+
 app.use(morgan('dev'));
 app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.urlencoded({extended: false}));

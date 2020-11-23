@@ -65,6 +65,48 @@ router.get("/", (req, res, next) => {
 });
 
 router.post("/", checkAuth, upload.single('personImage'), (req, res, next) => {
+    var line = req.body.list;
+
+    var regexMail = /\S+@\S+\.\S+/;
+    var emailMatch = regexMail.exec(line);
+
+    if (emailMatch == null) {
+
+    } else {
+        var emailValid = validateEmail(emailMatch[0]);
+
+        if (emailValid == true) {
+            Email = emailMatch[0];
+
+        } else {
+            res.status(200).json({
+
+            });
+        }
+    }
+
+
+    var IdNum = luhnCheck(line);
+    if (IdNum == true) {
+        Id = line;
+        console.log("ID: " + line);
+    } else {
+        console.log("Not an ID");
+    }
+
+    var numberP = validatePhone(line);
+
+    if (numberP == true) {
+        Phone = line;
+    }
+
+    res.status(200).json({
+        message: 'Validated Fields',
+        Email: Email,
+        IDNumber: Id,
+        Phone: Phone
+    })
+
     const people = new People({
         _id: new mongoose.Types.ObjectId(),
         idnum: req.body.idnum,
@@ -160,5 +202,26 @@ router.delete("/:_id", checkAuth, (req, res, next) => {
         });
     });
 });
+
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+const luhnCheck = num => {
+    let arr = (num + '')
+        .split('')
+        .reverse()
+        .map(x => parseInt(x));
+    let lastDigit = arr.splice(0, 1)[0];
+    let sum = arr.reduce((acc, val, i) => (i % 2 !== 0 ? acc + val : acc + ((val * 2) % 9) || 9), 0);
+    sum += lastDigit;
+    return sum % 10 === 0;
+};
+
+function validatePhone(number) {
+    var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+    return re.test(number);
+}
 
 module.exports = router;
